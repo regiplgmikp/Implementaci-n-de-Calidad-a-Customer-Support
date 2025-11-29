@@ -2,3 +2,6 @@ pymongo
 pydantic
 pydgraph
 cassandra-driver
+pytest
+pytest-cov
+flake8
