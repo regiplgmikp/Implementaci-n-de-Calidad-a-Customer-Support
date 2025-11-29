@@ -1,0 +1,101 @@
+idTicket,tipoProblema,descripcion
+40e552e4-64d0-4929-8efa-2a6f0607e238,2,Optimización de base de datos por lentitud en facturación
+43181fc4-049c-4c6d-a49f-2e4a21e199ea,1,Restablecimiento de contraseña de acceso
+c13fe8db-d1a1-4928-8570-98ea518fe376,8,Cliente no proporcionó información requerida
+b212b1ff-a4b9-4ef1-9c9c-f6d4df47c9df,2,Actualización de software para módulo de reportes
+7bd434f7-e39f-42fd-8cae-3ef35b3a52ed,8,Requerimiento fuera de alcance del contrato
+2c4092f4-3012-4d5c-9927-bdeabcc21309,6,Actualización de VPN para conexión remota
+d1fd0de1-c554-46e6-894c-77bb0f3a217e,4,Configuración de impresora en red corporativa
+a25fd595-db96-48d1-b776-70c04acf5651,8,Cliente agresivo - Escalado a supervisor
+99d88983-9f27-42f6-b236-1ee4cd4869e4,3,Migración de datos a nueva plataforma
+d9bddac6-ca45-46ea-a3ce-1145924f6e30,2,Investigación de integración con API
+e2c70a3c-c272-4c54-83ad-51306cda3207,5,Recuperación de archivos eliminados
+4cffa0bb-0917-4299-bb75-49bf3c4ca679,8,Cliente no envió datos necesarios
+a66571c4-545f-4067-a133-83449ca36713,3,Actualización de seguridad en estación de trabajo
+e8a31ead-6c41-48b6-bb4f-b4e170327672,8,Capacitación en módulo contable
+3cfc8ed3-e0af-44b6-b5a8-7ce1c0d238ae,8,Esperando aprobación de presupuesto
+fdafda78-d8b3-430b-a434-0d23f93a5b62,4,Reemplazo de equipo por daño eléctrico
+3d26204c-dc37-4589-8459-e8c6c532658c,6,Configuración de correo en dispositivo móvil
+4ec4ae2d-4fe7-4816-a4c9-1313c2963825,8,Cliente insatisfecho con tiempo de respuesta
+101e63ed-ecab-4e8f-9371-f23f9a86ac42,3,Instalación de software especializado
+8c0f7297-d3ea-42cb-afee-2fd4a0f96a70,2,Monitoreo de problema intermitente en servidor
+6714a585-1120-4233-aad9-e70690e5cf8f,5,Recuperación de datos de disco duro
+fafe3041-7ee0-4110-b314-7d06174664dc,3,Actualización de licencias corporativas
+f1405b10-613c-4f0e-bced-4fc093793ec2,2,Esperando repuesto para reparación
+b068b38a-7f8f-4d50-83e0-aedfa7343706,2,Reinicio de servicio en la nube
+7d899b0f-a23f-4872-ba77-81ea4c5318e2,8,Cliente no confirmó solución implementada
+cbe40566-eebb-464f-bd69-a2e55902b680,3,Migración a nuevo sistema operativo
+d14ae23f-335b-4d76-a489-da9b7d048f23,7,Configuración de firewall para nuevo departamento
+4b58b580-b938-4a8f-b277-356641f2df83,2,Análisis de integración con sistemas legacy
+11d7c0ba-5e29-45e3-83e5-250cd1112ea5,4,Reemplazo de batería en UPS de servidor
+a4bf3a8a-281d-4cbf-9a1e-172ea17bf5df,2,Cliente reportó nuevo error post-solución
+b8038f74-a91e-4dd2-a195-edb8deee9b17,8,Capacitación en seguridad informática
+d642e5b9-6d7f-4eb3-b30c-cd5fd034aab1,8,Esperando autorización para cambios
+62f6f2a5-6815-40fa-8f79-3f3b085957b7,2,Optimización de consultas SQL
+8a3483b2-1c5b-4aa9-add0-d3a23e3ae551,2,Solución a problema de sincronización móvil
+7d0dab52-adf1-4e10-a2f6-80caa0a02ca6,8,Cliente rechazó solución propuesta
+d5fafa83-b2ee-497c-a6f8-c4de816f7f9a,4,Instalación de puntos de acceso WiFi
+0fab2681-3367-4d2a-8469-dc32eef305ee,2,Análisis de integración con sistema de terceros
+de94c01d-9764-4508-b42f-9c5b367e2e68,7,Actualización de política de contraseñas
+b558104c-c330-41ac-acee-8086c85cd155,5,Respaldo de información crítica
+d242c83b-c094-47fe-b4a0-2d450644aad1,8,Cliente reporta problema persistente
+603db007-df2e-49cc-bbb5-634292c5e67a,4,Configuración de impresora multifuncional
+732e62cf-1c8b-4f79-a2e1-32e2a1b3a617,8,Esperando llegada de equipo nuevo
+1dfa575f-f019-4de6-9cfe-590c1913af6f,4,Solución a problema de visualización 4K
+7549f6fe-f95a-4a23-96d7-2318126f20d7,8,Cliente no sigue instrucciones
+a65ab927-de55-4971-911e-bd143878980b,6,Migración a plataforma de correo nueva
+a8d6486d-d617-4adf-8b3c-63a2a6b908cd,2,Investigación de driver de impresora defectuoso
+08716b35-944f-4097-aab0-c6d4797c13d5,4,Actualización de firmware en switches
+d371b967-f21c-40b0-bfea-3a73907beef5,8,Solicitud fuera del alcance del contrato
+da20c8ff-4965-49ed-8ae8-905198f899e3,6,Configuración de VPN para teletrabajo
+28532ea7-f262-4b76-94e1-cc27043176b6,8,Esperando confirmación del cliente
+e2717c33-fbf7-44ab-90c5-498439dccad3,8,Ticket generado automáticamente por sistema
+66042dca-e0da-4e69-a2ae-b53c859c7e02,2,Error en generación de reportes PDF
+81546123-5f9d-48b4-8fdd-a670718d1f6f,3,Actualización de driver gráfico
+2d907c50-3e36-427b-8f79-3d9c91171a52,8,Soporte para nuevo departamento
+c069bc6c-2294-4b56-8aea-3044458e3752,6,Problema de sincronización en la nube
+647c3375-d825-4523-a494-85f301d6e67f,4,Reemplazo de memoria RAM defectuosa
+d6c2e792-0c9e-429a-9773-14110b7b3ebf,2,Error 404 en página interna
+80f28501-cbbf-4ed2-9dde-0070673c71a7,4,Configuración de impresora en red
+305ad3ba-49a1-4a72-aec6-9a804223bba8,3,Solución a problema de audio
+e44997da-c443-44df-851a-8113de97afbe,8,Solicitud de capacitación en software nuevo
+de77f2b4-830a-4899-b2c8-419c9794533f,6,Problema intermitente con VPN
+51832d9c-5164-4fba-b31b-c3d5f36ff7a6,7,Actualización de certificado SSL
+bce71c80-9e65-48b9-87fb-2db463c82aef,2,Error en acceso a base de datos secundaria
+ed732d70-7752-4e1e-b5da-99306186999a,8,Asistencia remota urgente requerida
+2186a827-148b-4ad8-8790-57617e32eee9,7,Restauración de acceso a carpeta compartida
+aef42cf0-0db0-49b8-bb46-9c5f0706273f,8,Reporte de phishing por empleado
+94fccf79-8a0a-4ce6-835a-fa4308fd6aee,4,Problema con scanner de documentos
+74838df8-4dc5-4663-a00a-d9bfd3316fa8,7,Configuración de usuario en Active Directory
+74d1ba26-a471-41c3-bc29-9eae4e9acbda,8,Solicitud de software especializado
+e1e3b432-8125-449d-bdaa-4cd67c86b885,6,Error en conexión a impresora de red
+1c7e21c4-8894-4443-acb1-be30bf919bfe,1,Solución a problema de doble autenticación
+42a8acb7-eae7-46a8-aee3-62e525f853f7,2,Caída momentánea de servidor de archivos
+5031b424-a26e-4515-a0ba-4eb40e8fd20c,2,Cliente no puede acceder a aplicación web
+4a8f3498-5e47-4fbd-8069-ad133aaf9924,3,Actualización de Java en estaciones críticas
+a86f9a77-f203-40fe-a4b0-301c578ecd38,8,Problema con firma digital en documentos
+887563b2-1a18-46b4-8c6e-35f873468fe9,6,Error en sincronización de calendario Outlook
+e6d62f36-f84a-467e-a834-cb62c97ba453,4,Reemplazo de teclado defectuoso
+2f451709-5e67-4671-a44e-e4b3bf017dc1,8,Solicitud de aumento de almacenamiento en nube
+8f38949d-d305-4f56-92ae-a72ad2837593,2,Problema con macro compleja de Excel
+76b42fdc-d182-4379-98f6-d5ffe1990a28,4,Configuración de punto de acceso inalámbrico
+670a66c6-3056-4fbd-b0ce-ef1d72bab58f,2,Error al imprimir desde aplicación contable
+abbf2847-d161-4116-9a58-5313c311497d,2,Lentitud en aplicación ERP reportada
+feac2319-b62a-414c-a0a6-73834804493c,2,Solución a problema de conexión con BD
+0fcec766-424b-4b81-8924-d15502919b25,8,Solicitud de correos temporales
+1119242d-09e5-4515-955a-5b04ce576d60,2,Error en generación de facturas electrónicas
+35cf1bae-5ef0-4e8c-9c20-f3f763e5f59c,7,Restablecimiento de acceso a usuario
+59fa7777-e35e-4f0e-a321-9406e4fbd279,8,Problema con certificado digital caducado
+c5dd45c6-1573-4c10-8229-c54bebd57fa5,2,Cliente no puede visualizar archivos PDF
+115ddbf3-7d5f-4640-bb70-99a52320218a,5,Actualización de sistema de respaldo
+3463e799-e97d-450e-a847-d53e98a4c172,2,Error en integración con sistema de nómina
+50270a06-7286-4822-b8ae-bc8558d0860f,4,Problema con reconocimiento de huella digital
+509c59a7-8242-4d95-875f-77ac0f7bf71d,4,Configuración de servidor de impresión
+7133b982-a43a-414a-b066-d420741ab374,8,Solicitud de software estadístico
+676f4946-07a7-44b0-ba30-e80d1ed4e0f1,2,Error en cálculo de reporte financiero
+d21605f5-2c3b-4868-a95d-f830559cba91,5,Migración de datos a nueva tabla
+8a7f1598-dc19-44bf-9436-06d01cf13239,8,Problema con reconocimiento de voz
+d6bf348a-ffe1-4a43-be3d-1d0c15d4d537,2,Error al exportar datos a CSV
+ce6b4ac8-6a5a-40a8-9718-3d51209c43d2,4,Reparación de cableado de red
+6a0c10c9-2868-4f26-aa9b-6f3c20857b1e,8,Solicitud de capacitación en ciberseguridad
+241791aa-c0eb-48de-9dc6-fe34f717383f,2,Problema con actualización automática de Windows

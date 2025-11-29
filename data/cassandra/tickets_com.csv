@@ -1,0 +1,202 @@
+idTicket,fecha,idAgente,comentario
+40e552e4-64d0-4929-8efa-2a6f0607e238,2023-01-16T14:30:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Seguimiento inicial del ticket.
+40e552e4-64d0-4929-8efa-2a6f0607e238,2023-01-16T19:30:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Cliente reportó lentitud en sistema de facturación. Se optimizó la base de datos.
+40e552e4-64d0-4929-8efa-2a6f0607e238,2023-01-17T14:15:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Ticket cerrado.
+43181fc4-049c-4c6d-a49f-2e4a21e199ea,2023-02-03T16:20:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Seguimiento inicial del ticket.
+43181fc4-049c-4c6d-a49f-2e4a21e199ea,2023-02-03T21:20:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Problema con credenciales de acceso. Se restableció contraseña.
+43181fc4-049c-4c6d-a49f-2e4a21e199ea,2023-02-05T16:45:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Ticket cerrado.
+c13fe8db-d1a1-4928-8570-98ea518fe376,2023-03-10T19:00:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Seguimiento inicial del ticket.
+c13fe8db-d1a1-4928-8570-98ea518fe376,2023-03-11T00:00:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Cliente no respondió a solicitud de información adicional.
+b212b1ff-a4b9-4ef1-9c9c-f6d4df47c9df,2023-03-18T15:15:00,951e7856-3f84-408d-a647-7cb77473999e,Seguimiento inicial del ticket.
+b212b1ff-a4b9-4ef1-9c9c-f6d4df47c9df,2023-03-18T20:15:00,951e7856-3f84-408d-a647-7cb77473999e,Error en módulo de reportes. Se actualizó el software.
+b212b1ff-a4b9-4ef1-9c9c-f6d4df47c9df,2023-03-20T12:30:00,951e7856-3f84-408d-a647-7cb77473999e,Ticket cerrado.
+2c4092f4-3012-4d5c-9927-bdeabcc21309,2023-04-12T18:30:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Seguimiento inicial del ticket.
+2c4092f4-3012-4d5c-9927-bdeabcc21309,2023-04-12T23:30:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Problema de conexión remota resuelto con actualización de VPN.
+2c4092f4-3012-4d5c-9927-bdeabcc21309,2023-04-14T17:00:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Ticket cerrado.
+d1fd0de1-c554-46e6-894c-77bb0f3a217e,2023-05-22T21:20:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Seguimiento inicial del ticket.
+d1fd0de1-c554-46e6-894c-77bb0f3a217e,2023-05-23T02:20:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Configuración de impresora en red corporativa.
+d1fd0de1-c554-46e6-894c-77bb0f3a217e,2023-05-24T11:10:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Ticket cerrado.
+a25fd595-db96-48d1-b776-70c04acf5651,2023-06-07T14:15:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Seguimiento inicial del ticket.
+a25fd595-db96-48d1-b776-70c04acf5651,2023-06-07T19:15:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Cliente agresivo durante llamada. Escalar a supervisor.
+99d88983-9f27-42f6-b236-1ee4cd4869e4,2023-06-18T19:50:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Seguimiento inicial del ticket.
+99d88983-9f27-42f6-b236-1ee4cd4869e4,2023-06-19T00:50:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Migración exitosa de datos a nueva plataforma.
+99d88983-9f27-42f6-b236-1ee4cd4869e4,2023-06-20T10:30:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Ticket cerrado.
+d9bddac6-ca45-46ea-a3ce-1145924f6e30,2023-07-01T16:05:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Seguimiento inicial del ticket.
+d9bddac6-ca45-46ea-a3ce-1145924f6e30,2023-07-01T21:05:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Problema complejo con integración de API. En investigación.
+e2c70a3c-c272-4c54-83ad-51306cda3207,2023-07-15T13:30:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Seguimiento inicial del ticket.
+e2c70a3c-c272-4c54-83ad-51306cda3207,2023-07-15T18:30:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Restauración de archivos eliminados accidentalmente.
+e2c70a3c-c272-4c54-83ad-51306cda3207,2023-07-16T12:15:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Ticket cerrado.
+4cffa0bb-0917-4299-bb75-49bf3c4ca679,2023-08-02T15:45:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Seguimiento inicial del ticket.
+4cffa0bb-0917-4299-bb75-49bf3c4ca679,2023-08-02T20:45:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Cliente no ha proporcionado datos necesarios para resolver.
+a66571c4-545f-4067-a133-83449ca36713,2023-08-19T18:20:00,951e7856-3f84-408d-a647-7cb77473999e,Seguimiento inicial del ticket.
+a66571c4-545f-4067-a133-83449ca36713,2023-08-19T23:20:00,951e7856-3f84-408d-a647-7cb77473999e,Actualización de seguridad aplicada a estación de trabajo.
+a66571c4-545f-4067-a133-83449ca36713,2023-08-21T15:45:00,951e7856-3f84-408d-a647-7cb77473999e,Ticket cerrado.
+e8a31ead-6c41-48b6-bb4f-b4e170327672,2023-09-05T14:10:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Seguimiento inicial del ticket.
+e8a31ead-6c41-48b6-bb4f-b4e170327672,2023-09-05T19:10:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Capacitación en uso de nuevo módulo contable.
+e8a31ead-6c41-48b6-bb4f-b4e170327672,2023-09-07T11:30:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Ticket cerrado.
+3cfc8ed3-e0af-44b6-b5a8-7ce1c0d238ae,2023-09-18T21:25:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Seguimiento inicial del ticket.
+3cfc8ed3-e0af-44b6-b5a8-7ce1c0d238ae,2023-09-19T02:25:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Ticket pendiente por aprobación de presupuesto.
+fdafda78-d8b3-430b-a434-0d23f93a5b62,2023-10-03T16:50:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Seguimiento inicial del ticket.
+fdafda78-d8b3-430b-a434-0d23f93a5b62,2023-10-03T21:50:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Reemplazo de equipo dañado por subida de voltaje.
+fdafda78-d8b3-430b-a434-0d23f93a5b62,2023-10-05T14:15:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Ticket cerrado.
+3d26204c-dc37-4589-8459-e8c6c532658c,2023-10-20T13:15:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Seguimiento inicial del ticket.
+3d26204c-dc37-4589-8459-e8c6c532658c,2023-10-20T18:15:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Configuración de correo corporativo en dispositivo móvil.
+3d26204c-dc37-4589-8459-e8c6c532658c,2023-10-22T10:40:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Ticket cerrado.
+101e63ed-ecab-4e8f-9371-f23f9a86ac42,2023-11-15T15:05:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Seguimiento inicial del ticket.
+101e63ed-ecab-4e8f-9371-f23f9a86ac42,2023-11-15T20:05:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Instalación de software especializado completada.
+101e63ed-ecab-4e8f-9371-f23f9a86ac42,2023-11-17T13:20:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Ticket cerrado.
+8c0f7297-d3ea-42cb-afee-2fd4a0f96a70,2023-12-01T14:40:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Seguimiento inicial del ticket.
+8c0f7297-d3ea-42cb-afee-2fd4a0f96a70,2023-12-01T19:40:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Problema intermitente en servidor. Monitoreo activo.
+6714a585-1120-4233-aad9-e70690e5cf8f,2023-12-12T18:15:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Seguimiento inicial del ticket.
+6714a585-1120-4233-aad9-e70690e5cf8f,2023-12-12T23:15:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Recuperación de datos de disco duro dañado.
+6714a585-1120-4233-aad9-e70690e5cf8f,2023-12-14T16:30:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Ticket cerrado.
+fafe3041-7ee0-4110-b314-7d06174664dc,2024-01-05T13:50:00,951e7856-3f84-408d-a647-7cb77473999e,Seguimiento inicial del ticket.
+fafe3041-7ee0-4110-b314-7d06174664dc,2024-01-05T18:50:00,951e7856-3f84-408d-a647-7cb77473999e,Actualización de licencias de software corporativo.
+fafe3041-7ee0-4110-b314-7d06174664dc,2024-01-07T11:10:00,951e7856-3f84-408d-a647-7cb77473999e,Ticket cerrado.
+f1405b10-613c-4f0e-bced-4fc093793ec2,2024-01-18T16:25:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Seguimiento inicial del ticket.
+f1405b10-613c-4f0e-bced-4fc093793ec2,2024-01-18T21:25:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Esperando repuesto para reparación de hardware.
+b068b38a-7f8f-4d50-83e0-aedfa7343706,2024-02-02T19:40:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Seguimiento inicial del ticket.
+b068b38a-7f8f-4d50-83e0-aedfa7343706,2024-02-03T00:40:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Problema resuelto con reinicio de servicio en la nube.
+b068b38a-7f8f-4d50-83e0-aedfa7343706,2024-02-04T17:05:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Ticket cerrado.
+cbe40566-eebb-464f-bd69-a2e55902b680,2024-03-01T13:30:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Seguimiento inicial del ticket.
+cbe40566-eebb-464f-bd69-a2e55902b680,2024-03-01T18:30:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Migración a nueva versión de sistema operativo completada.
+cbe40566-eebb-464f-bd69-a2e55902b680,2024-03-03T12:45:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Ticket cerrado.
+d14ae23f-335b-4d76-a489-da9b7d048f23,2024-03-12T18:55:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Seguimiento inicial del ticket.
+d14ae23f-335b-4d76-a489-da9b7d048f23,2024-03-12T23:55:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Configuración de firewall para nuevo departamento.
+d14ae23f-335b-4d76-a489-da9b7d048f23,2024-03-14T16:20:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Ticket cerrado.
+4b58b580-b938-4a8f-b277-356641f2df83,2024-04-05T14:20:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Seguimiento inicial del ticket.
+4b58b580-b938-4a8f-b277-356641f2df83,2024-04-05T19:20:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Problema complejo con integración de sistemas legacy.
+11d7c0ba-5e29-45e3-83e5-250cd1112ea5,2024-04-18T16:35:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Seguimiento inicial del ticket.
+11d7c0ba-5e29-45e3-83e5-250cd1112ea5,2024-04-18T21:35:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Reemplazo de batería en UPS de servidor crítico.
+11d7c0ba-5e29-45e3-83e5-250cd1112ea5,2024-04-20T14:50:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Ticket cerrado.
+a4bf3a8a-281d-4cbf-9a1e-172ea17bf5df,2024-05-02T20:00:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Seguimiento inicial del ticket.
+a4bf3a8a-281d-4cbf-9a1e-172ea17bf5df,2024-05-03T01:00:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Cliente reportó nuevo error después de solución inicial.
+b8038f74-a91e-4dd2-a195-edb8deee9b17,2024-05-15T15:25:00,951e7856-3f84-408d-a647-7cb77473999e,Seguimiento inicial del ticket.
+b8038f74-a91e-4dd2-a195-edb8deee9b17,2024-05-15T20:25:00,951e7856-3f84-408d-a647-7cb77473999e,Capacitación en seguridad informática para equipo nuevo.
+b8038f74-a91e-4dd2-a195-edb8deee9b17,2024-05-17T13:40:00,951e7856-3f84-408d-a647-7cb77473999e,Ticket cerrado.
+d642e5b9-6d7f-4eb3-b30c-cd5fd034aab1,2024-06-01T13:50:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Seguimiento inicial del ticket.
+d642e5b9-6d7f-4eb3-b30c-cd5fd034aab1,2024-06-01T18:50:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Esperando autorización para proceder con cambios.
+62f6f2a5-6815-40fa-8f79-3f3b085957b7,2024-06-14T17:05:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Seguimiento inicial del ticket.
+62f6f2a5-6815-40fa-8f79-3f3b085957b7,2024-06-14T22:05:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Optimización de consultas a base de datos completada.
+62f6f2a5-6815-40fa-8f79-3f3b085957b7,2024-06-16T15:20:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Ticket cerrado.
+8a3483b2-1c5b-4aa9-add0-d3a23e3ae551,2024-07-03T14:30:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Seguimiento inicial del ticket.
+8a3483b2-1c5b-4aa9-add0-d3a23e3ae551,2024-07-03T19:30:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Resuelto problema de sincronización en aplicación móvil.
+8a3483b2-1c5b-4aa9-add0-d3a23e3ae551,2024-07-05T11:55:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Ticket cerrado.
+7d0dab52-adf1-4e10-a2f6-80caa0a02ca6,2024-07-18T19:45:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Seguimiento inicial del ticket.
+7d0dab52-adf1-4e10-a2f6-80caa0a02ca6,2024-07-19T00:45:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Cliente insatisfecho con solución propuesta. Revisar alternativas.
+d5fafa83-b2ee-497c-a6f8-c4de816f7f9a,2024-08-05T16:10:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Seguimiento inicial del ticket.
+d5fafa83-b2ee-497c-a6f8-c4de816f7f9a,2024-08-05T21:10:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Instalación de nuevos puntos de acceso WiFi en oficina.
+d5fafa83-b2ee-497c-a6f8-c4de816f7f9a,2024-08-07T14:25:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Ticket cerrado.
+0fab2681-3367-4d2a-8469-dc32eef305ee,2024-08-20T13:35:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Seguimiento inicial del ticket.
+0fab2681-3367-4d2a-8469-dc32eef305ee,2024-08-20T18:35:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Problema con integración de sistema de terceros. En análisis.
+de94c01d-9764-4508-b42f-9c5b367e2e68,2024-09-02T18:50:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Seguimiento inicial del ticket.
+de94c01d-9764-4508-b42f-9c5b367e2e68,2024-09-02T23:50:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Actualización de política de contraseñas implementada.
+de94c01d-9764-4508-b42f-9c5b367e2e68,2024-09-04T16:15:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Ticket cerrado.
+b558104c-c330-41ac-acee-8086c85cd155,2024-09-15T15:05:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Seguimiento inicial del ticket.
+b558104c-c330-41ac-acee-8086c85cd155,2024-09-15T20:05:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Respaldo de información crítica completado.
+b558104c-c330-41ac-acee-8086c85cd155,2024-09-17T12:30:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Ticket cerrado.
+603db007-df2e-49cc-bbb5-634292c5e67a,2024-10-14T14:45:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Seguimiento inicial del ticket.
+603db007-df2e-49cc-bbb5-634292c5e67a,2024-10-14T19:45:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Configuración de nueva impresora multifuncional.
+603db007-df2e-49cc-bbb5-634292c5e67a,2024-10-16T12:10:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Ticket cerrado.
+732e62cf-1c8b-4f79-a2e1-32e2a1b3a617,2024-10-28T19:00:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Seguimiento inicial del ticket.
+732e62cf-1c8b-4f79-a2e1-32e2a1b3a617,2024-10-29T00:00:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Ticket pendiente por llegada de equipo nuevo.
+1dfa575f-f019-4de6-9cfe-590c1913af6f,2024-11-10T16:25:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Seguimiento inicial del ticket.
+1dfa575f-f019-4de6-9cfe-590c1913af6f,2024-11-10T21:25:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Problema de visualización en monitor 4K resuelto.
+1dfa575f-f019-4de6-9cfe-590c1913af6f,2024-11-12T13:50:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Ticket cerrado.
+7549f6fe-f95a-4a23-96d7-2318126f20d7,2024-11-25T13:40:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Seguimiento inicial del ticket.
+7549f6fe-f95a-4a23-96d7-2318126f20d7,2024-11-25T18:40:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Cliente no sigue instrucciones proporcionadas.
+a65ab927-de55-4971-911e-bd143878980b,2024-12-05T18:55:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Seguimiento inicial del ticket.
+a65ab927-de55-4971-911e-bd143878980b,2024-12-05T23:55:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Migración a nueva plataforma de correo electrónico.
+a65ab927-de55-4971-911e-bd143878980b,2024-12-07T16:20:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Ticket cerrado.
+a8d6486d-d617-4adf-8b3c-63a2a6b908cd,2024-12-18T15:10:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Seguimiento inicial del ticket.
+a8d6486d-d617-4adf-8b3c-63a2a6b908cd,2024-12-18T20:10:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Problema recurrente con driver de impresora. En investigación.
+08716b35-944f-4097-aab0-c6d4797c13d5,2025-01-03T20:25:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Seguimiento inicial del ticket.
+08716b35-944f-4097-aab0-c6d4797c13d5,2025-01-04T01:25:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Actualización de firmware en switches de red.
+08716b35-944f-4097-aab0-c6d4797c13d5,2025-01-05T17:50:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Ticket cerrado.
+da20c8ff-4965-49ed-8ae8-905198f899e3,2025-02-01T19:15:00,951e7856-3f84-408d-a647-7cb77473999e,Seguimiento inicial del ticket.
+da20c8ff-4965-49ed-8ae8-905198f899e3,2025-02-02T00:15:00,951e7856-3f84-408d-a647-7cb77473999e,Configuración de VPN para teletrabajo completada.
+da20c8ff-4965-49ed-8ae8-905198f899e3,2025-02-03T16:40:00,951e7856-3f84-408d-a647-7cb77473999e,Ticket cerrado.
+28532ea7-f262-4b76-94e1-cc27043176b6,2025-02-14T16:30:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Seguimiento inicial del ticket.
+28532ea7-f262-4b76-94e1-cc27043176b6,2025-02-14T21:30:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Esperando confirmación de cliente para proceder.
+66042dca-e0da-4e69-a2ae-b53c859c7e02,2023-02-08T19:20:00,a8030c33-d333-4b58-8dfe-aeebb413b300,Seguimiento inicial del ticket.
+66042dca-e0da-4e69-a2ae-b53c859c7e02,2023-02-09T00:20:00,a8030c33-d333-4b58-8dfe-aeebb413b300,Cliente reporta error al generar reportes PDF
+81546123-5f9d-48b4-8fdd-a670718d1f6f,2023-03-15T14:45:00,026ebbc1-569a-4734-8a88-1d754714390c,Seguimiento inicial del ticket.
+81546123-5f9d-48b4-8fdd-a670718d1f6f,2023-03-15T19:45:00,026ebbc1-569a-4734-8a88-1d754714390c,Actualizado driver de tarjeta gráfica
+81546123-5f9d-48b4-8fdd-a670718d1f6f,2023-03-17T12:00:00,026ebbc1-569a-4734-8a88-1d754714390c,Ticket cerrado.
+c069bc6c-2294-4b56-8aea-3044458e3752,2023-04-22T21:30:00,942dcd07-755c-4ad8-af7c-3993e97256a0,Seguimiento inicial del ticket.
+c069bc6c-2294-4b56-8aea-3044458e3752,2023-04-23T02:30:00,942dcd07-755c-4ad8-af7c-3993e97256a0,Problema con sincronización en la nube
+647c3375-d825-4523-a494-85f301d6e67f,2023-05-10T13:15:00,1221026d-af02-49bf-b0f8-80f15c41570f,Seguimiento inicial del ticket.
+647c3375-d825-4523-a494-85f301d6e67f,2023-05-10T18:15:00,1221026d-af02-49bf-b0f8-80f15c41570f,Reemplazada memoria RAM defectuosa
+647c3375-d825-4523-a494-85f301d6e67f,2023-05-12T10:30:00,1221026d-af02-49bf-b0f8-80f15c41570f,Ticket cerrado.
+80f28501-cbbf-4ed2-9dde-0070673c71a7,2023-06-20T14:05:00,3ae6e42d-3d1d-4efb-a2dc-9137bb85baa6,Seguimiento inicial del ticket.
+80f28501-cbbf-4ed2-9dde-0070673c71a7,2023-06-20T19:05:00,3ae6e42d-3d1d-4efb-a2dc-9137bb85baa6,Configuración de nueva impresora en red
+305ad3ba-49a1-4a72-aec6-9a804223bba8,2023-07-07T19:20:00,f57a4282-e530-4e51-abe6-cf0d7623ce6e,Seguimiento inicial del ticket.
+305ad3ba-49a1-4a72-aec6-9a804223bba8,2023-07-08T00:20:00,f57a4282-e530-4e51-abe6-cf0d7623ce6e,Solucionado problema de audio en equipo
+305ad3ba-49a1-4a72-aec6-9a804223bba8,2023-07-09T16:35:00,f57a4282-e530-4e51-abe6-cf0d7623ce6e,Ticket cerrado.
+de77f2b4-830a-4899-b2c8-419c9794533f,2023-08-18T20:10:00,ae3ccbe3-8934-4632-81fe-1595f200139e,Seguimiento inicial del ticket.
+de77f2b4-830a-4899-b2c8-419c9794533f,2023-08-19T01:10:00,ae3ccbe3-8934-4632-81fe-1595f200139e,Problema intermitente con VPN corporativa
+51832d9c-5164-4fba-b31b-c3d5f36ff7a6,2023-09-05T13:35:00,9ab6fee3-4ad2-4b50-b3aa-d00112ace51a,Seguimiento inicial del ticket.
+51832d9c-5164-4fba-b31b-c3d5f36ff7a6,2023-09-05T18:35:00,9ab6fee3-4ad2-4b50-b3aa-d00112ace51a,Actualizado certificado SSL expirado
+51832d9c-5164-4fba-b31b-c3d5f36ff7a6,2023-09-07T10:50:00,9ab6fee3-4ad2-4b50-b3aa-d00112ace51a,Ticket cerrado.
+ed732d70-7752-4e1e-b5da-99306186999a,2023-10-10T14:25:00,f80ac5e2-c885-41bd-9b8c-90a03d5a9de2,Seguimiento inicial del ticket.
+ed732d70-7752-4e1e-b5da-99306186999a,2023-10-10T19:25:00,f80ac5e2-c885-41bd-9b8c-90a03d5a9de2,Cliente solicita asistencia remota urgente
+2186a827-148b-4ad8-8790-57617e32eee9,2023-10-27T19:40:00,6ecbc600-74a3-4ce6-b35d-501adb7c1fa2,Seguimiento inicial del ticket.
+2186a827-148b-4ad8-8790-57617e32eee9,2023-10-28T00:40:00,6ecbc600-74a3-4ce6-b35d-501adb7c1fa2,Restaurado acceso a carpeta compartida
+2186a827-148b-4ad8-8790-57617e32eee9,2023-10-29T16:55:00,6ecbc600-74a3-4ce6-b35d-501adb7c1fa2,Ticket cerrado.
+94fccf79-8a0a-4ce6-835a-fa4308fd6aee,2023-12-01T13:30:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Seguimiento inicial del ticket.
+94fccf79-8a0a-4ce6-835a-fa4308fd6aee,2023-12-01T18:30:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Problema con scanner de documentos
+74838df8-4dc5-4663-a00a-d9bfd3316fa8,2023-12-18T18:45:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Seguimiento inicial del ticket.
+74838df8-4dc5-4663-a00a-d9bfd3316fa8,2023-12-18T23:45:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Configurado nuevo usuario en Active Directory
+74838df8-4dc5-4663-a00a-d9bfd3316fa8,2023-12-20T16:00:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Ticket cerrado.
+e1e3b432-8125-449d-bdaa-4cd67c86b885,2024-01-22T20:25:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Seguimiento inicial del ticket.
+e1e3b432-8125-449d-bdaa-4cd67c86b885,2024-01-23T01:25:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Error al conectar a impresora de red
+1c7e21c4-8894-4443-acb1-be30bf919bfe,2024-02-08T14:50:00,951e7856-3f84-408d-a647-7cb77473999e,Seguimiento inicial del ticket.
+1c7e21c4-8894-4443-acb1-be30bf919bfe,2024-02-08T19:50:00,951e7856-3f84-408d-a647-7cb77473999e,Solucionado problema de doble autenticación
+1c7e21c4-8894-4443-acb1-be30bf919bfe,2024-02-10T12:05:00,951e7856-3f84-408d-a647-7cb77473999e,Ticket cerrado.
+5031b424-a26e-4515-a0ba-4eb40e8fd20c,2024-03-13T16:30:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Seguimiento inicial del ticket.
+5031b424-a26e-4515-a0ba-4eb40e8fd20c,2024-03-13T21:30:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Cliente no puede acceder a aplicación web
+4a8f3498-5e47-4fbd-8069-ad133aaf9924,2024-03-30T21:45:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Seguimiento inicial del ticket.
+4a8f3498-5e47-4fbd-8069-ad133aaf9924,2024-03-31T02:45:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Actualizado Java en estaciones críticas
+4a8f3498-5e47-4fbd-8069-ad133aaf9924,2024-04-01T19:00:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Ticket cerrado.
+887563b2-1a18-46b4-8c6e-35f873468fe9,2024-05-04T18:15:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Seguimiento inicial del ticket.
+887563b2-1a18-46b4-8c6e-35f873468fe9,2024-05-04T23:15:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Error en sincronización de calendario Outlook
+e6d62f36-f84a-467e-a834-cb62c97ba453,2024-05-21T13:40:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Seguimiento inicial del ticket.
+e6d62f36-f84a-467e-a834-cb62c97ba453,2024-05-21T18:40:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Reemplazado teclado defectuoso
+e6d62f36-f84a-467e-a834-cb62c97ba453,2024-05-23T10:55:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Ticket cerrado.
+8f38949d-d305-4f56-92ae-a72ad2837593,2024-06-24T16:20:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Seguimiento inicial del ticket.
+8f38949d-d305-4f56-92ae-a72ad2837593,2024-06-24T21:20:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Problema con macro de Excel compleja
+76b42fdc-d182-4379-98f6-d5ffe1990a28,2024-07-11T21:35:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Seguimiento inicial del ticket.
+76b42fdc-d182-4379-98f6-d5ffe1990a28,2024-07-12T02:35:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Configuración de nuevo punto de acceso inalámbrico
+76b42fdc-d182-4379-98f6-d5ffe1990a28,2024-07-13T18:50:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Ticket cerrado.
+abbf2847-d161-4116-9a58-5313c311497d,2024-08-14T19:25:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Seguimiento inicial del ticket.
+abbf2847-d161-4116-9a58-5313c311497d,2024-08-15T00:25:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Cliente reporta lentitud en aplicación ERP
+feac2319-b62a-414c-a0a6-73834804493c,2024-08-31T15:50:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Seguimiento inicial del ticket.
+feac2319-b62a-414c-a0a6-73834804493c,2024-08-31T20:50:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Resuelto problema de conexión a base de datos
+feac2319-b62a-414c-a0a6-73834804493c,2024-09-02T13:05:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Ticket cerrado.
+1119242d-09e5-4515-955a-5b04ce576d60,2024-10-04T16:30:00,951e7856-3f84-408d-a647-7cb77473999e,Seguimiento inicial del ticket.
+1119242d-09e5-4515-955a-5b04ce576d60,2024-10-04T21:30:00,951e7856-3f84-408d-a647-7cb77473999e,Error en generación de facturas electrónicas
+35cf1bae-5ef0-4e8c-9c20-f3f763e5f59c,2024-10-21T21:45:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Seguimiento inicial del ticket.
+35cf1bae-5ef0-4e8c-9c20-f3f763e5f59c,2024-10-22T02:45:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Restablecido acceso a usuario bloqueado
+35cf1bae-5ef0-4e8c-9c20-f3f763e5f59c,2024-10-23T19:00:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Ticket cerrado.
+c5dd45c6-1573-4c10-8229-c54bebd57fa5,2024-11-24T18:25:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Seguimiento inicial del ticket.
+c5dd45c6-1573-4c10-8229-c54bebd57fa5,2024-11-24T23:25:00,074e81b9-2712-4cf8-a3cb-131589f4cb8b,Cliente no puede visualizar archivos PDF
+115ddbf3-7d5f-4640-bb70-99a52320218a,2024-12-11T13:50:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Seguimiento inicial del ticket.
+115ddbf3-7d5f-4640-bb70-99a52320218a,2024-12-11T18:50:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Actualizado sistema de respaldo automático
+115ddbf3-7d5f-4640-bb70-99a52320218a,2024-12-13T11:05:00,34af2e94-2354-4556-8b21-3f8e0bc6ce9b,Ticket cerrado.
+50270a06-7286-4822-b8ae-bc8558d0860f,2025-01-14T16:30:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Seguimiento inicial del ticket.
+50270a06-7286-4822-b8ae-bc8558d0860f,2025-01-14T21:30:00,346d3d6c-8391-43c7-b4ba-b92da318d20f,Problema con reconocimiento de huella digital
+509c59a7-8242-4d95-875f-77ac0f7bf71d,2025-01-31T21:45:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Seguimiento inicial del ticket.
+509c59a7-8242-4d95-875f-77ac0f7bf71d,2025-02-01T02:45:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Configurado nuevo servidor de impresión
+509c59a7-8242-4d95-875f-77ac0f7bf71d,2025-02-02T19:00:00,b76c05ef-ceb1-451e-8695-1e4e1b7c8447,Ticket cerrado.
+676f4946-07a7-44b0-ba30-e80d1ed4e0f1,2025-03-06T18:25:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Seguimiento inicial del ticket.
+676f4946-07a7-44b0-ba30-e80d1ed4e0f1,2025-03-06T23:25:00,548fcfc5-90cb-4a9a-a3a5-18129d8eab95,Error en cálculo de reporte financiero
+d21605f5-2c3b-4868-a95d-f830559cba91,2025-03-23T13:50:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Seguimiento inicial del ticket.
+d21605f5-2c3b-4868-a95d-f830559cba91,2025-03-23T18:50:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Migración de datos a nueva tabla completada
+d21605f5-2c3b-4868-a95d-f830559cba91,2025-03-25T11:05:00,da439fd3-7eee-4fce-9d04-39c0dbdd504d,Ticket cerrado.
+d6bf348a-ffe1-4a43-be3d-1d0c15d4d537,2025-04-26T16:30:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Seguimiento inicial del ticket.
+d6bf348a-ffe1-4a43-be3d-1d0c15d4d537,2025-04-26T21:30:00,27fe9eca-a43b-4f83-b4fc-ad736a653aa6,Error al exportar datos a formato CSV
+ce6b4ac8-6a5a-40a8-9718-3d51209c43d2,2025-05-13T21:45:00,951e7856-3f84-408d-a647-7cb77473999e,Seguimiento inicial del ticket.
+ce6b4ac8-6a5a-40a8-9718-3d51209c43d2,2025-05-14T02:45:00,951e7856-3f84-408d-a647-7cb77473999e,Reparado cableado de red en área administrativa
+ce6b4ac8-6a5a-40a8-9718-3d51209c43d2,2025-05-15T19:00:00,951e7856-3f84-408d-a647-7cb77473999e,Ticket cerrado.
+241791aa-c0eb-48de-9dc6-fe34f717383f,2025-06-16T18:25:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Seguimiento inicial del ticket.
+241791aa-c0eb-48de-9dc6-fe34f717383f,2025-06-16T23:25:00,b72cf553-04fc-4334-abd8-57f0e55e65d9,Problema con actualización automática de Windows
