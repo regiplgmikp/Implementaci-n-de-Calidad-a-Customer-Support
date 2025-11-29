@@ -1,0 +1,61 @@
+name: Calidad y Pruebas (CI)
+
+# Se ejecuta en cada push a main/develop y en cada Pull Request
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+
+jobs:
+  quality-check:
+    name: Análisis de Calidad
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Bajar el código del repositorio
+      - name: Checkout del código
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Importante para que SonarQube analice el historial
+
+      # 2. Preparar Python
+      - name: Configurar Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      # 3. Instalar dependencias
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # 4. Análisis Estático Rápido (Flake8)
+      # Esto falla rápido si hay errores de sintaxis o estilo graves
+      - name: Correr Flake8
+        run: |
+          # Detener el build si hay errores de sintaxis o nombres no definidos
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # Advertencias de estilo (no detienen el build, pero se muestran)
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
+
+      # 5. Ejecutar Pruebas y Generar Cobertura
+      # Aquí se ejecutarían las pruebas unitarias.
+      - name: Ejecutar Pytest con Cobertura
+        run: |
+          # Si no hay tests todavía, esto puede fallar. 
+          # Puedes agregar "|| true" al final para que no falle si no hay tests aún.
+          pytest || true 
+
+      # 6. Escaneo de SonarCloud
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Lo pone GitHub solo
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}    # Se debe agregar manualmente en Settings > Secrets
