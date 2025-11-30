@@ -49,7 +49,7 @@ jobs:
           echo "📂 Buscando carpeta tests:"
           find . -name "tests" -type d
           echo "📂 Buscando carpeta Tests (Mayúscula):"
-          find . -name "Tests" -type d
+          find . -name "Tests" -type 
 
       # 5. Ejecutar Pruebas y Generar Cobertura (XML)
       - name: Ejecutar Pytest con Cobertura
