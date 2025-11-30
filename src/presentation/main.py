@@ -4,7 +4,6 @@ import os
 # Configuración de rutas
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-# NOTA: # noqa: E402 indica a flake8 que ignore el error de
 # "import no está al inicio", porque el sys.path es necesario antes.
 from presentation.menu_options import (  # noqa: E402
     MAIN_MENU,
@@ -18,10 +17,25 @@ from business.support_service import SupportService  # noqa: E402
 
 # Intentamos importar validaciones
 try:
+    # AHORA SÍ: Importamos Validaciones y las usamos
     from utils.validaciones import Validaciones, solicitar_input  # noqa: E402
 except ImportError:
+    # Fallback por si acaso falla el import
     def solicitar_input(msg, func=None):
         return input(msg)
+
+    class Validaciones:
+        @staticmethod
+        def validar_no_vacio(x):
+            return True
+
+        @staticmethod
+        def validar_email(x):
+            return True
+
+        @staticmethod
+        def validar_entero(x):
+            return x.isdigit()
 
 # Instancia global del servicio para usar en todo el menú
 service = None
@@ -45,7 +59,13 @@ def procesar_registros():
     while True:
         mostrar_menu(MENU_REGISTROS)
         try:
-            op = int(input(">> Seleccione una opción: "))
+            # Usamos validación para asegurar que sea número
+            op_str = solicitar_input(
+                ">> Seleccione una opción: ",
+                Validaciones.validar_entero
+            )
+            op = int(op_str)
+
             if op == 0:
                 break
 
@@ -56,11 +76,21 @@ def procesar_registros():
             # 1. REGISTRO DE AGENTE
             if op == 1:
                 print("\n--- Nuevo Agente ---")
-                nombre = input("Nombre: ")
-                email = input("Email: ")
-                rol = input("Rol (Soporte/Admin): ")
+                # Validamos que no esté vacío
+                nombre = solicitar_input(
+                    "Nombre: ",
+                    Validaciones.validar_no_vacio
+                )
+                # Validamos formato de correo real
+                email = solicitar_input(
+                    "Email: ",
+                    Validaciones.validar_email
+                )
+                rol = solicitar_input(
+                    "Rol (Soporte/Admin): ",
+                    Validaciones.validar_no_vacio
+                )
 
-                # ¡Llamada real al sistema!
                 uid = service.registrar_agente(nombre, email, rol)
                 if uid:
                     print(f"✨ ¡Agente registrado! ID Interno: {uid}")
@@ -68,9 +98,18 @@ def procesar_registros():
             # 2. REGISTRO DE CLIENTE
             elif op == 2:
                 print("\n--- Nuevo Cliente ---")
-                nombre = input("Nombre: ")
-                email = input("Email: ")
-                tel = input("Teléfono: ")
+                nombre = solicitar_input(
+                    "Nombre: ",
+                    Validaciones.validar_no_vacio
+                )
+                email = solicitar_input(
+                    "Email: ",
+                    Validaciones.validar_email
+                )
+                tel = solicitar_input(
+                    "Teléfono: ",
+                    Validaciones.validar_no_vacio
+                )
 
                 uid = service.registrar_cliente(nombre, email, tel)
                 if uid:
@@ -79,10 +118,22 @@ def procesar_registros():
             # 3. REGISTRO DE TICKET
             elif op == 3:
                 print("\n--- Nuevo Ticket ---")
-                id_cliente = input("ID del Cliente que reporta: ")
-                titulo = input("Título del problema: ")
-                desc = input("Descripción detallada: ")
-                prio = input("Prioridad (Alta/Media/Baja): ")
+                id_cliente = solicitar_input(
+                    "ID Cliente: ",
+                    Validaciones.validar_no_vacio
+                )
+                titulo = solicitar_input(
+                    "Título: ",
+                    Validaciones.validar_no_vacio
+                )
+                desc = solicitar_input(
+                    "Descripción: ",
+                    Validaciones.validar_no_vacio
+                )
+                prio = solicitar_input(
+                    "Prioridad: ",
+                    Validaciones.validar_no_vacio
+                )
 
                 uid = service.registrar_ticket(titulo, desc, prio, id_cliente)
                 if uid:
@@ -101,12 +152,20 @@ def procesar_consultas_agentes():
     while True:
         mostrar_menu(MENU_AGENTES)
         try:
-            op = int(input(">> Seleccione una opción: "))
+            op_str = solicitar_input(
+                ">> Seleccione una opción: ",
+                Validaciones.validar_entero
+            )
+            op = int(op_str)
+
             if op == 0:
                 break
 
             if op == 1:
-                nombre = input("Ingrese nombre: ")
+                nombre = solicitar_input(
+                    "Ingrese nombre: ",
+                    Validaciones.validar_no_vacio
+                )
                 agente = service.obtener_agente(nombre, por_id=False)
                 if agente:
                     print(f"\n✅ Agente Encontrado:\n{agente}")
@@ -114,7 +173,10 @@ def procesar_consultas_agentes():
                     print("❌ No se encontró el agente.")
 
             elif op == 2:
-                uid = input("Ingrese ID: ")
+                uid = solicitar_input(
+                    "Ingrese ID: ",
+                    Validaciones.validar_no_vacio
+                )
                 agente = service.obtener_agente(uid, por_id=True)
                 if agente:
                     print(f"\n✅ Agente Encontrado:\n{agente}")
@@ -155,14 +217,15 @@ def main():
     print("* CUSTOMER SUPPORT SYSTEM (REFACTORIZADO)     *")
     print("*************************************************")
 
-    # Inicializamos conexiones
     inicializar_servicio()
 
     while True:
         mostrar_menu(MAIN_MENU)
         try:
+            # Usamos input simple aquí para permitir strings y validar después
             op_txt = input("Seleccione una opción principal: ")
             if not op_txt.isdigit():
+                print("❌ Debe ingresar un número.")
                 continue
             op = int(op_txt)
 
@@ -196,4 +259,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
