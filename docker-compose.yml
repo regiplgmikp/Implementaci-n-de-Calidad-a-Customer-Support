@@ -1,0 +1,62 @@
+version: "3.8"
+
+services:
+  # -----------------------------------------------------------
+  # MONGODB (Puerto 27017)
+  # -----------------------------------------------------------
+  mongodb:
+    image: mongo:latest
+    container_name: customer_support_mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      # Guardamos los datos en una carpeta segura "docker_volumes"
+      # para no mezclarla con tu código fuente.
+      - ./docker_volumes/mongo:/data/db
+
+  # -----------------------------------------------------------
+  # CASSANDRA (Puerto 9042)
+  # -----------------------------------------------------------
+  cassandra:
+    image: cassandra:4.1
+    container_name: customer_support_cassandra
+    restart: always
+    ports:
+      - "9042:9042"
+    environment:
+      - CASSANDRA_CLUSTER_NAME=CustomerSupport
+      - CASSANDRA_DC=dc1
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+    volumes:
+      - ./docker_volumes/cassandra:/var/lib/cassandra
+
+  # -----------------------------------------------------------
+  # DGRAPH (Grafo distribuido)
+  # -----------------------------------------------------------
+  dgraph_zero:
+    image: dgraph/dgraph:latest
+    container_name: customer_support_dgraph_zero
+    volumes:
+      - ./docker_volumes/dgraph/zero:/dgraph
+    ports:
+      - "5080:5080"
+      - "6080:6080"
+    command: dgraph zero --my=dgraph_zero:5080
+
+  dgraph_alpha:
+    image: dgraph/dgraph:latest
+    container_name: customer_support_dgraph_alpha
+    volumes:
+      - ./docker_volumes/dgraph/alpha:/dgraph
+    ports:
+      - "8080:8080"
+      - "9080:9080"
+    command: dgraph alpha --my=dgraph_alpha:7080 --zero=dgraph_zero:5080 --security whitelist=0.0.0.0/0
+
+  dgraph_ratel:
+    image: dgraph/dgraph:latest
+    container_name: customer_support_dgraph_ui
+    ports:
+      - "8000:8000"
+    command: dgraph-ratel
