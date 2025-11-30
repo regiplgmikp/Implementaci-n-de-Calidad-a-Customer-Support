@@ -1,7 +1,6 @@
 venv/
 __pycache__/
 .pytest_cache/
-
 # Ignorar volúmenes de docker
 docker_images/
 docker_containers/
