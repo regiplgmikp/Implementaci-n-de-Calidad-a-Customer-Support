@@ -3,3 +3,5 @@ __pycache__/
 tests/
 # Ignorar volúmenes de docker
 docker_volumes/
+*.env
+docker-compose.override.yml
