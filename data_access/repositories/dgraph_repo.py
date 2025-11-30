@@ -52,3 +52,32 @@ class DgraphRepository:
         <_{id_cliente}> <creo_ticket> <_{id_ticket}> .
         """
         self._ejecutar_mutacion(nquads)
+# ... (código anterior de mutaciones) ...
+
+    def buscar_tickets_por_keyword(self, keyword):
+        """
+        Realiza una búsqueda Fulltext en las descripciones de los tickets.
+        Usa el índice @index(fulltext) que definiste en el esquema.
+        """
+        query = """
+        query search($term: string) {
+            tickets(func: type(Ticket)) @filter(anyoftext(descripcion, $term)) {
+                idTicket
+                tipoProblema
+                descripcion
+                ABRE {
+                    nombreCliente
+                }
+            }
+        }
+        """
+        variables = {'$term': keyword}
+        try:
+            res = self.client.txn(read_only=True).query(query, variables=variables)
+            # pydgraph devuelve bytes, hay que decodificar
+            import json
+            data = json.loads(res.json)
+            return data.get('tickets', [])
+        except Exception as e:
+            print(f"   (Dgraph) ❌ Error buscando keywords: {e}")
+            return []

@@ -4,7 +4,6 @@ import os
 import pydgraph
 import sys
 from data_access.db_connection import DBConnection
-from uuid import UUID
 
 # Configuración de rutas para importar Formatter
 sys.path.append(
@@ -58,7 +57,7 @@ def set_schema(client):
     idTicket: string @index(exact) @upsert .
     tipoProblema: int .
     descripcion: string @index(fulltext) .
-    
+
     TIENE: [uid] @reverse .
     TRABAJA: uid @reverse .
     SOLUCIONA: [uid] @reverse .

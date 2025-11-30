@@ -4,7 +4,6 @@ import sys
 import json
 from data_access.repositories.mongo_repo import MongoRepository
 from datetime import datetime
-from uuid import UUID
 
 # Configuramos las rutas para encontrar src
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
