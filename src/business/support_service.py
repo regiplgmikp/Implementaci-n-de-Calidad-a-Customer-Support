@@ -9,7 +9,7 @@ from data_access.repositories.dgraph_repo import DgraphRepository
 class SupportService:
     def __init__(self):
         # Mensaje para confirmar que se cargó la versión correcta
-        print("⚙️ Inicializando servicios completos (Mongo + Cassandra + Dgraph)...")
+        print("⚙️ Inicializando servicios completos (Mongo, Cass, Dgraph)...")
         # Inicializamos los 3 repositorios
         self.mongo_repo = MongoRepository()
         self.cassandra_repo = CassandraRepository()
