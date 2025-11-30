@@ -1,10 +1,24 @@
 import sys
 import os
 
-# Configuración de rutas
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# -----------------------------------------------------------------------------
+# CONFIGURACIÓN DE RUTAS
+# -----------------------------------------------------------------------------
+# Obtenemos la ruta del directorio actual
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Ruta a 'src'
+src_path = os.path.abspath(os.path.join(current_dir, '..'))
+# Ruta a la RAÍZ del proyecto 
+root_path = os.path.abspath(os.path.join(src_path, '..'))
 
-# "import no está al inicio", porque el sys.path es necesario antes.
+# Agregamos ambas rutas al sistema para poder importar todo
+sys.path.append(src_path)
+sys.path.append(root_path)
+
+# -----------------------------------------------------------------------------
+# IMPORTACIONES
+# -----------------------------------------------------------------------------
+
 from presentation.menu_options import (  # noqa: E402
     MAIN_MENU,
     MENU_REGISTROS,
@@ -15,9 +29,16 @@ from presentation.menu_options import (  # noqa: E402
 # Importamos el Servicio (El Cerebro)
 from business.support_service import SupportService  # noqa: E402
 
+# Importamos el Orquestador de Poblado (Opción 0)
+try:
+    from scripts.populate_db import poblar_todo  # noqa: E402
+except ImportError:
+    # Fallback para no romper el programa si el script no está listo
+    def poblar_todo():
+        print("⚠️ El script 'scripts/populate_db.py' no se encuentra.")
+
 # Intentamos importar validaciones
 try:
-    # AHORA SÍ: Importamos Validaciones y las usamos
     from utils.validaciones import Validaciones, solicitar_input  # noqa: E402
 except ImportError:
     # Fallback por si acaso falla el import
@@ -26,16 +47,11 @@ except ImportError:
 
     class Validaciones:
         @staticmethod
-        def validar_no_vacio(x):
-            return True
-
+        def validar_no_vacio(x): return True
         @staticmethod
-        def validar_email(x):
-            return True
-
+        def validar_email(x): return True
         @staticmethod
-        def validar_entero(x):
-            return x.isdigit()
+        def validar_entero(x): return x.isdigit()
 
 # Instancia global del servicio para usar en todo el menú
 service = None
@@ -59,7 +75,6 @@ def procesar_registros():
     while True:
         mostrar_menu(MENU_REGISTROS)
         try:
-            # Usamos validación para asegurar que sea número
             op_str = solicitar_input(
                 ">> Seleccione una opción: ",
                 Validaciones.validar_entero
@@ -76,12 +91,10 @@ def procesar_registros():
             # 1. REGISTRO DE AGENTE
             if op == 1:
                 print("\n--- Nuevo Agente ---")
-                # Validamos que no esté vacío
                 nombre = solicitar_input(
                     "Nombre: ",
                     Validaciones.validar_no_vacio
                 )
-                # Validamos formato de correo real
                 email = solicitar_input(
                     "Email: ",
                     Validaciones.validar_email
@@ -188,7 +201,7 @@ def procesar_consultas_agentes():
             print("❌ Error de entrada")
 
 
-# Definimos las funciones stubs en varias líneas para cumplir PEP 8
+# Definimos las funciones stubs
 def procesar_consultas_clientes():
     print(">> Módulo en construcción")
     input("Enter...")
@@ -222,7 +235,6 @@ def main():
     while True:
         mostrar_menu(MAIN_MENU)
         try:
-            # Usamos input simple aquí para permitir strings y validar después
             op_txt = input("Seleccione una opción principal: ")
             if not op_txt.isdigit():
                 print("❌ Debe ingresar un número.")
@@ -235,7 +247,10 @@ def main():
                     service.cerrar_conexiones()
                 break
             elif op == 0:
-                print("ℹ️  Use scripts/populate.py para carga masiva.")
+                # AQUÍ ESTÁ LA MAGIA: Llamamos al orquestador
+                poblar_todo()
+                # Re-inicializamos el servicio por si se cerraron conexiones
+                inicializar_servicio()
             elif op == 1:
                 procesar_registros()
             elif op == 2:
