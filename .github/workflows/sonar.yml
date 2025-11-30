@@ -1,13 +1,10 @@
 name: SonarQube Analysis
 
 on:
-  # Disparadores: Cuándo se ejecuta esta acción
+  # Disparadores: Se ejecuta en CUALQUIER rama para que detecte tu trabajo actual
   push:
     branches:
-      - main
-      - develop
-      - 'feature/**' # Se ejecuta en cualquier rama feature/algo
-      - 'fix/**'
+      - '**'      
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -17,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      # PASO 1: Descargar tu código en el entorno virtual de GitHub
+      # PASO 1: Descargar código
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # IMPORTANTE: Desactiva la clonación superficial para que SonarQube pueda analizar el historial completo y detectar "Código Nuevo"
+          fetch-depth: 0  # Importante para análisis histórico
 
-      # PASO 2: Preparar Python (necesario para correr los tests antes del análisis)
+      # PASO 2: Preparar Python
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
@@ -36,14 +33,16 @@ jobs:
           pip install pytest pytest-cov
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      # PASO 4: Ejecutar Pruebas y Generar Reporte de Cobertura
-      # SonarQube NO ejecuta las pruebas, solo LEE el reporte. Por eso debemos generarlo aquí.
+      # PASO 4: Ejecutar Pruebas (CON EL FIX DE PYTHONPATH)
       - name: Run Tests with Coverage
         run: |
-          pytest --cov=. --cov-report=xml:coverage.xml
+          # 1. Le decimos a Python dónde está la carpeta src
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+          
+          # 2. Ejecutamos pytest apuntando a la carpeta tests
+          pytest tests/ --cov=src --cov-report=xml:coverage.xml --cov-report=term
 
       # PASO 5: Escaneo de SonarQube
-      # Aquí se conecta con tu Ngrok usando los secretos
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
         env:
