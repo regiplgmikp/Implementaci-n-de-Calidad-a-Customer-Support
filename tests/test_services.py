@@ -5,8 +5,8 @@ from unittest.mock import MagicMock
 # -------------------------------------------------------------------------
 # CONFIGURACIÓN DE RUTAS
 # -------------------------------------------------------------------------
-src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../src'))
-root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src"))
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 if src_path not in sys.path:
     sys.path.insert(0, src_path)
@@ -38,16 +38,17 @@ def service_mock():
 
     return service
 
+
 # -------------------------------------------------------------------------
 # PRUEBAS DE ESCRITURA (REGISTROS) - YA LAS TENÍAS
 # -------------------------------------------------------------------------
 
 
 def test_registrar_agente_exitoso(service_mock):
-    service_mock.mongo_repo.crear_agente.return_value = '123-abc'
+    service_mock.mongo_repo.crear_agente.return_value = "123-abc"
     uid = service_mock.registrar_agente("Agente 007", "bond@mi6.com", "Soporte")
 
-    assert uid == '123-abc'
+    assert uid == "123-abc"
     service_mock.mongo_repo.crear_agente.assert_called_once()
     service_mock.cassandra_repo.registrar_evento.assert_called_once()
     service_mock.dgraph_repo.crear_nodo_agente.assert_called_once()
@@ -60,17 +61,17 @@ def test_registrar_agente_fallo_mongo(service_mock):
 
 
 def test_registrar_cliente_valido(service_mock):
-    service_mock.mongo_repo.crear_cliente.return_value = 'cli-999'
+    service_mock.mongo_repo.crear_cliente.return_value = "cli-999"
     uid = service_mock.registrar_cliente("Cliente Feliz", "c@test.com", "555-1234")
-    assert uid == 'cli-999'
+    assert uid == "cli-999"
 
 
 def test_registrar_ticket_completo(service_mock):
-    service_mock.mongo_repo.crear_ticket.return_value = 'ticket-777'
+    service_mock.mongo_repo.crear_ticket.return_value = "ticket-777"
 
     uid = service_mock.registrar_ticket("Wifi Lento", "No carga", 1, "cli-999")
 
-    assert uid == 'ticket-777'
+    assert uid == "ticket-777"
     service_mock.cassandra_repo.registrar_cambio_estado_ticket.assert_called_once()
     service_mock.dgraph_repo.relacionar_cliente_ticket.assert_called_once()
 
@@ -78,6 +79,7 @@ def test_registrar_ticket_completo(service_mock):
 # -------------------------------------------------------------------------
 # NUEVAS PRUEBAS DE LECTURA (PARA SUBIR COBERTURA > 80%)
 # -------------------------------------------------------------------------
+
 
 def test_filtrar_tickets_mongo(service_mock):
     """Prueba la consulta de tickets con filtros en MongoDB"""
@@ -87,12 +89,12 @@ def test_filtrar_tickets_mongo(service_mock):
     service_mock.mongo_repo.tickets.find.return_value = mock_tickets
 
     # 2. Ejecutamos
-    filtros = {'estado': 1}
+    filtros = {"estado": 1}
     resultado = service_mock.filtrar_tickets(filtros)
 
     # 3. Validamos
     assert len(resultado) == 2
-    service_mock.mongo_repo.tickets.find.assert_called_once_with({'estado': 1})
+    service_mock.mongo_repo.tickets.find.assert_called_once_with({"estado": 1})
 
 
 def test_filtrar_tickets_error(service_mock):
@@ -122,7 +124,9 @@ def test_ver_traza_ticket_cassandra(service_mock):
     resultado = service_mock.ver_traza_ticket("ticket-777")
 
     assert len(resultado) == 1
-    service_mock.cassandra_repo.obtener_historial_ticket.assert_called_once_with("ticket-777")
+    service_mock.cassandra_repo.obtener_historial_ticket.assert_called_once_with(
+        "ticket-777"
+    )
 
 
 def test_obtener_ticket_por_id(service_mock):

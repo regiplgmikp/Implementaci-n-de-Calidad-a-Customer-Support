@@ -6,8 +6,8 @@ from unittest.mock import MagicMock, patch
 # -------------------------------------------------------------------------
 # CONFIGURACIÓN DE RUTAS (Vital para encontrar los módulos)
 # -------------------------------------------------------------------------
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 # -------------------------------------------------------------------------
 # MOCKS GLOBALES (Para evitar errores de importación de drivers)
@@ -29,7 +29,7 @@ class TestMongoRepository:
 
     @pytest.fixture
     def repo(self):
-        with patch('data_access.db_connection.DBConnection.get_mongo_db') as mock_db:
+        with patch("data_access.db_connection.DBConnection.get_mongo_db") as mock_db:
             # Simulamos las colecciones
             mock_db.return_value = MagicMock()
             repo = MongoRepository()
@@ -52,7 +52,7 @@ class TestMongoRepository:
         repo.agents.insert_one.assert_called_once()
         # Validar que el objeto insertado contiene los datos
         args, _ = repo.agents.insert_one.call_args
-        assert args[0]['nombre'] == "Test Agent"
+        assert args[0]["nombre"] == "Test Agent"
 
     def test_obtener_agente_por_nombre(self, repo):
         # Configuramos el mock para que devuelva un resultado simulado
@@ -60,7 +60,7 @@ class TestMongoRepository:
 
         resultado = repo.obtener_agente_por_nombre("Juan")
 
-        assert resultado['nombre'] == "Juan"
+        assert resultado["nombre"] == "Juan"
         repo.agents.find_one.assert_called_once()
 
 
@@ -69,7 +69,9 @@ class TestCassandraRepository:
 
     @pytest.fixture
     def repo(self):
-        with patch('data_access.db_connection.DBConnection.get_cassandra_session') as mock_session:
+        with patch(
+            "data_access.db_connection.DBConnection.get_cassandra_session"
+        ) as mock_session:
             # El mock devuelve una sesión falsa
             mock_session.return_value = MagicMock()
             repo = CassandraRepository()
@@ -94,7 +96,9 @@ class TestDgraphRepository:
 
     @pytest.fixture
     def repo(self):
-        with patch('data_access.db_connection.DBConnection.get_dgraph_client') as mock_client:
+        with patch(
+            "data_access.db_connection.DBConnection.get_dgraph_client"
+        ) as mock_client:
             mock_client.return_value = MagicMock()
             repo = DgraphRepository()
             repo.client = MagicMock()
@@ -114,4 +118,4 @@ class TestDgraphRepository:
         # Nota: Dependiendo de tu imp. puede ser commit_now=True en mutate o txn.commit()
         # En tu código usas commit_now=True dentro de mutate
         args, kwargs = mock_txn.mutate.call_args
-        assert kwargs.get('commit_now') is True
+        assert kwargs.get("commit_now") is True
