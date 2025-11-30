@@ -1,4 +1,3 @@
-import json
 import pydgraph
 from data_access.db_connection import DBConnection
 
