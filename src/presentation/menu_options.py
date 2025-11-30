@@ -45,14 +45,14 @@ MENU_CLIENTES = {
 }
 
 MENU_TICKETS = {
-    0:  "Regresar a menú principal", 
+    0:  "Regresar a menú principal",
     1:  "Obtener información de ticket en base a su ID",
     2:  "Mostrar Tickets con estado “Cerrado” por Agente",
     3:  "Mostrar Tickets con estado “En proceso” por Agente",
     4:  "Mostrar Tickets con estado “Cerrado” por Empresa",
     5:  "Mostrar Tickets con estado “En proceso” por Empresa",
     6:  "Mostrar Tickets con estado “Abierto” por Empresa",
-    7:  "Mostrar Tickets con estado “Cerrado” por Cliente.",         
+    7:  "Mostrar Tickets con estado “Cerrado” por Cliente.",
     8:  "Mostrar Tickets con estado “En proceso” por Cliente.",
     9:  "Mostrar Tickets con estado “Abierto” por Cliente.",
     10: "Filtrar tickets de empresa por prioridad",
@@ -80,6 +80,7 @@ MENU_EMPRESAS = {
     2: "Obtener información de empresa en base a su id",
     3: "Mostrar ubicación de la empresa por medio de su id"
 }
+
 
 def mostrar_menu(opciones_dict):
     """Función auxiliar para imprimir cualquier menú de forma limpia"""
