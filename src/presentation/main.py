@@ -142,6 +142,26 @@ def procesar_registros():
             print("❌ Ingrese un número válido")
 
 
+# --- Funciones auxiliares para reducir complejidad ---
+def _buscar_agente_por_nombre():
+    """Helper para la opción 1"""
+    nombre = solicitar_input("Ingrese nombre: ", Validaciones.validar_no_vacio)
+    agente = service.obtener_agente(nombre, por_id=False)
+    if agente:
+        print(f"\n✅ Agente Encontrado:\n{agente}")
+    else:
+        print("❌ No se encontró el agente.")
+
+def _buscar_agente_por_id():
+    """Helper para la opción 2"""
+    uid = solicitar_input("Ingrese ID: ", Validaciones.validar_no_vacio)
+    agente = service.obtener_agente(uid, por_id=True)
+    if agente:
+        print(f"\n✅ Agente Encontrado:\n{agente}")
+    else:
+        print("❌ ID no encontrado.")
+
+# --- Función Principal Refactorizada (Complejidad < 5) ---
 def procesar_consultas_agentes():
     while True:
         mostrar_menu(MENU_AGENTES)
@@ -153,26 +173,13 @@ def procesar_consultas_agentes():
 
             if op == 0:
                 break
-
-            if op == 1:
-                nombre = solicitar_input(
-                    "Ingrese nombre: ", Validaciones.validar_no_vacio
-                )
-                agente = service.obtener_agente(nombre, por_id=False)
-                if agente:
-                    print(f"\n✅ Agente Encontrado:\n{agente}")
-                else:
-                    print("❌ No se encontró el agente.")
-
+            elif op == 1:
+                _buscar_agente_por_nombre()
             elif op == 2:
-                uid = solicitar_input("Ingrese ID: ", Validaciones.validar_no_vacio)
-                agente = service.obtener_agente(uid, por_id=True)
-                if agente:
-                    print(f"\n✅ Agente Encontrado:\n{agente}")
-                else:
-                    print("❌ ID no encontrado.")
+                _buscar_agente_por_id()
             else:
                 print(">> Opción en construcción")
+
         except ValueError:
             print("❌ Error de entrada")
 
