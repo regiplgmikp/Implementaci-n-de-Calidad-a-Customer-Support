@@ -1,50 +1,44 @@
 name: SonarQube Analysis
 
 on:
-  # Disparadores: Se ejecuta en CUALQUIER rama para que detecte tu trabajo actual
   push:
     branches:
-      - '**'      
+      - '**'  # Ejecutar en todas las ramas (incluyendo ImplementacionControlada)
   pull_request:
     types: [opened, synchronize, reopened]
 
 jobs:
-  sonar-scan:
+  sonar:
     name: SonarQube Scan
     runs-on: ubuntu-latest
-    
     steps:
-      # PASO 1: Descargar código
-      - name: Checkout source code
-        uses: actions/checkout@v4
+      # 1. Obtener código (Igual que PDF pag 20)
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Importante para análisis histórico
+          fetch-depth: 0  # CRÍTICO: Necesario para el análisis correcto 
 
-      # PASO 2: Preparar Python
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+      # 2. Configurar Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: '3.10'
 
-      # PASO 3: Instalar dependencias
+      # 3. Instalar dependencias
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pytest pytest-cov
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      # PASO 4: Ejecutar Pruebas (CON EL FIX DE PYTHONPATH)
+      # 4. Generar Reporte de Cobertura (Esto NO estaba en el PDF, pero lo necesitas hoy)
       - name: Run Tests with Coverage
         run: |
-          # 1. Le decimos a Python dónde está la carpeta src
           export PYTHONPATH=$PYTHONPATH:$(pwd)/src
-          
-          # 2. Ejecutamos pytest apuntando a la carpeta tests
           pytest tests/ --cov=src --cov-report=xml:coverage.xml --cov-report=term
 
-      # PASO 5: Escaneo de SonarQube
+      # 5. Escáner de Sonar (Igual que PDF pag 20)
       - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@master
+        uses: SonarSource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
