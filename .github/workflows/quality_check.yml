@@ -44,9 +44,12 @@ jobs:
       # 5. Ejecutar Pruebas y Generar Cobertura (XML)
       - name: Ejecutar Pytest con Cobertura
         run: |
-          # Generamos el reporte XML que SonarQube necesita leer
-          pytest --cov=src --cov-report=xml --cov-report=term
-
+          # 1. indica que busque la carpeta
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+          
+          # 2. Ejecutamos las pruebas (apuntando explícitamente a la carpeta tests/)
+          pytest tests/ --cov=src --cov-report=xml --cov-report=term
+          
       # 6. Escaneo de SonarQube (LOCAL con Ngrok)
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
