@@ -41,6 +41,16 @@ jobs:
           # Reportar complejidad y estilo (sin detener el build por ahora)
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
 
+      # --- NUEVO PASO DE DEBUG ---
+      - name: Debug - Listar archivos (¿Dónde estás carpeta tests?)
+        run: |
+          echo "📂 Listando archivos en la raíz:"
+          ls -la
+          echo "📂 Buscando carpeta tests:"
+          find . -name "tests" -type d
+          echo "📂 Buscando carpeta Tests (Mayúscula):"
+          find . -name "Tests" -type d
+
       # 5. Ejecutar Pruebas y Generar Cobertura (XML)
       - name: Ejecutar Pytest con Cobertura
         run: |
