@@ -17,9 +17,7 @@ try:
 
 except ImportError as e:
     print(f"❌ ERROR CRÍTICO DE IMPORTACIÓN: {e}")
-    print(
-        "Asegúrese de que los archivos para poblar estén en la carpeta 'scripts/'."
-    )
+    print("Asegúrese de que los archivos para poblar estén en la carpeta 'scripts/'.")
     exit(1)  # Salimos si no se pueden importar los módulos críticos
 
 

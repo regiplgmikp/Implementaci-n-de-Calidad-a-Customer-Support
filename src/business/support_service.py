@@ -26,19 +26,22 @@ class SupportService(BaseService):
     def registrar_agente(self, nombre, email, rol):
         try:
             self.log_info(f"🚀 Iniciando registro de Agente: {nombre}")
-            
+
             # 1. Mongo
             datos_agente = {
-                "nombre": nombre, "email": email, "rol": rol,
-                "activo": True, "fecha_creacion": datetime.now()
+                "nombre": nombre,
+                "email": email,
+                "rol": rol,
+                "activo": True,
+                "fecha_creacion": datetime.now(),
             }
             uid = self.mongo_repo.crear_agente(datos_agente)
-            
+
             # 2. Cassandra
             self.cassandra_repo.registrar_evento(
                 uid, "Agente", "CREACION", f"Alta de agente {nombre} con rol {rol}"
             )
-            
+
             # 3. Dgraph
             self.dgraph_repo.crear_nodo_agente(uid, nombre, email)
             return uid
@@ -58,12 +61,16 @@ class SupportService(BaseService):
         try:
             self.log_info(f"🚀 Iniciando registro de Cliente: {nombre}")
             datos = {
-                "nombre": nombre, "email": email, 
-                "telefono": telefono, "fecha_registro": datetime.now()
+                "nombre": nombre,
+                "email": email,
+                "telefono": telefono,
+                "fecha_registro": datetime.now(),
             }
             uid = self.mongo_repo.crear_cliente(datos)
-            
-            self.cassandra_repo.registrar_evento(uid, "Cliente", "CREACION", f"Nuevo: {email}")
+
+            self.cassandra_repo.registrar_evento(
+                uid, "Cliente", "CREACION", f"Nuevo: {email}"
+            )
             self.dgraph_repo.crear_nodo_cliente(uid, nombre)
             return uid
         except Exception as e:
@@ -77,17 +84,20 @@ class SupportService(BaseService):
         try:
             self.log_info(f"🚀 Creando Ticket para Cliente {id_cliente}")
             ticket = {
-                "titulo": titulo, "descripcion": descripcion,
-                "prioridad": prioridad, "cliente_id": id_cliente,
-                "estado": 1, "fecha_creacion": datetime.now() # Estado 1 = Abierto
+                "titulo": titulo,
+                "descripcion": descripcion,
+                "prioridad": prioridad,
+                "cliente_id": id_cliente,
+                "estado": 1,
+                "fecha_creacion": datetime.now(),  # Estado 1 = Abierto
             }
-            
+
             uid_ticket = self.mongo_repo.crear_ticket(ticket)
-            
+
             self.cassandra_repo.registrar_cambio_estado_ticket(
                 uid_ticket, "N/A", "Abierto", id_cliente
             )
-            
+
             self.dgraph_repo.crear_nodo_ticket(uid_ticket, titulo, prioridad)
             self.dgraph_repo.relacionar_cliente_ticket(id_cliente, uid_ticket)
             return uid_ticket
@@ -98,15 +108,18 @@ class SupportService(BaseService):
     # ----------------------------------------------------------------
     # CONSULTAS Y LECTURAS (Lo que te faltaba para pasar los tests)
     # ----------------------------------------------------------------
-    
+
     def filtrar_tickets(self, filtros):
         """Consulta tickets en Mongo aplicando filtros"""
         try:
             query = {}
-            if 'agente_id' in filtros: query['agente_id'] = filtros['agente_id']
-            if 'cliente_id' in filtros: query['cliente_id'] = filtros['cliente_id']
-            if 'estado' in filtros: query['estado'] = filtros['estado']
-            
+            if "agente_id" in filtros:
+                query["agente_id"] = filtros["agente_id"]
+            if "cliente_id" in filtros:
+                query["cliente_id"] = filtros["cliente_id"]
+            if "estado" in filtros:
+                query["estado"] = filtros["estado"]
+
             # Nota: Accedemos directo a la colección del repo
             return list(self.mongo_repo.tickets.find(query))
         except Exception as e:

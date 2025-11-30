@@ -1,6 +1,8 @@
 from datetime import datetime
 import uuid
 from data_access.db_connection import DBConnection
+
+
 class CassandraRepository:
     def __init__(self):
         self.session = DBConnection.get_cassandra_session()
@@ -28,7 +30,7 @@ class CassandraRepository:
                 usuario_id text,
                 PRIMARY KEY (ticket_id, fecha)
             ) WITH CLUSTERING ORDER BY (fecha DESC)
-            """
+            """,
         ]
         for q in queries:
             try:
@@ -43,14 +45,17 @@ class CassandraRepository:
         VALUES (%s, %s, %s, %s, %s, %s)
         """
         try:
-            self.session.execute(query, (
-                uuid.uuid4(), 
-                str(entidad_id), 
-                tipo_entidad, 
-                accion, 
-                descripcion, 
-                datetime.now()
-            ))
+            self.session.execute(
+                query,
+                (
+                    uuid.uuid4(),
+                    str(entidad_id),
+                    tipo_entidad,
+                    accion,
+                    descripcion,
+                    datetime.now(),
+                ),
+            )
             print("   (Cassandra) 📜 Evento registrado.")
         except Exception as e:
             print(f"   (Cassandra) ❌ Error registrando evento: {e}")
@@ -62,6 +67,9 @@ class CassandraRepository:
         VALUES (%s, %s, %s, %s, %s)
         """
         try:
-            self.session.execute(query, (str(ticket_id), datetime.now(), est_ant, est_nuevo, str(user_id)))
+            self.session.execute(
+                query,
+                (str(ticket_id), datetime.now(), est_ant, est_nuevo, str(user_id)),
+            )
         except Exception as e:
             print(f"   (Cassandra) ❌ Error registrando cambio de ticket: {e}")
