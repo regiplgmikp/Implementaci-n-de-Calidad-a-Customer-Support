@@ -1,16 +1,13 @@
 name: Calidad y Pruebas (CI)
 
-# Se ejecuta en cada push a main/develop y en cada Pull Request
+# Se ejecuta en cada push a cualquier rama (para que detecte la tuya)
 on:
   push:
     branches:
-      - main
-      - develop
+      - '**' #El ** significa "todas las ramas"
   pull_request:
     branches:
-      - main
-      - develop
-      - 'feature/**'
+      - '**'
 
 jobs:
   quality-check:
@@ -22,7 +19,7 @@ jobs:
       - name: Checkout del código
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Importante para que SonarQube analice el historial
+          fetch-depth: 0  # Importante para el análisis histórico
 
       # 2. Preparar Python
       - name: Configurar Python 3.10
@@ -36,26 +33,23 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      # 4. Análisis Estático Rápido (Flake8)
-      # Esto falla rápido si hay errores de sintaxis o estilo graves
+      # 4. Análisis Estático (Flake8)
       - name: Correr Flake8
         run: |
-          # Detener el build si hay errores de sintaxis o nombres no definidos
+          # Detener si hay errores graves
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          # Advertencias de estilo (no detienen el build, pero se muestran)
+          # Reportar complejidad y estilo (sin detener el build por ahora)
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
 
-      # 5. Ejecutar Pruebas y Generar Cobertura
-      # Aquí se ejecutarían las pruebas unitarias.
+      # 5. Ejecutar Pruebas y Generar Cobertura (XML)
       - name: Ejecutar Pytest con Cobertura
         run: |
-          # Si no hay tests todavía, esto puede fallar. 
-          # Puedes agregar "|| true" al final para que no falle si no hay tests aún.
-          pytest || true 
+          # Generamos el reporte XML que SonarQube necesita leer
+          pytest --cov=src --cov-report=xml --cov-report=term
 
-      # 6. Escaneo de SonarCloud
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+      # 6. Escaneo de SonarQube (LOCAL con Ngrok)
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Lo pone GitHub solo
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}    # Se debe agregar manualmente en Settings > Secrets
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} 
