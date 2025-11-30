@@ -43,7 +43,7 @@ try:
     from utils.validaciones import Validaciones, solicitar_input  # noqa: E402
 except ImportError:
     # Fallback por si acaso falla el import
-    def solicitar_input(msg, func=None):
+    def solicitar_input(msg, _=None):
         return input(msg)
 
     class Validaciones:
@@ -179,22 +179,22 @@ def procesar_consultas_agentes():
 
 # Definimos las funciones stubs
 def procesar_consultas_clientes():
-    print(">> Módulo en construcción")
+    print("Módulo en construcción de clientes")
     input("Enter...")
 
 
 def procesar_consultas_tickets():
-    print(">> Módulo en construcción")
+    print("Módulo en construcción de tickets")
     input("Enter...")
 
 
 def procesar_consultas_empresas():
-    print(">> Módulo en construcción")
+    print("Módulo en construcción de empresas")
     input("Enter...")
 
 
 def procesar_actualizaciones():
-    print(">> Módulo en construcción")
+    print("Módulo en construcción de actualizaciones")
     input("Enter...")
 
 
