@@ -2,6 +2,7 @@ import json
 import pydgraph
 from data_access.db_connection import DBConnection
 
+
 class DgraphRepository:
     def __init__(self):
         self.client = DBConnection.get_dgraph_client()

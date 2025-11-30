@@ -7,9 +7,9 @@ import os
 # Obtenemos la ruta del directorio actual
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # Ruta a 'src'
-src_path = os.path.abspath(os.path.join(current_dir, '..'))
-# Ruta a la RAÍZ del proyecto 
-root_path = os.path.abspath(os.path.join(src_path, '..'))
+src_path = os.path.abspath(os.path.join(current_dir, ".."))
+# Ruta a la RAÍZ del proyecto
+root_path = os.path.abspath(os.path.join(src_path, ".."))
 
 # Agregamos ambas rutas al sistema para poder importar todo
 sys.path.append(src_path)
@@ -23,7 +23,7 @@ from presentation.menu_options import (  # noqa: E402
     MAIN_MENU,
     MENU_REGISTROS,
     MENU_AGENTES,
-    mostrar_menu
+    mostrar_menu,
 )
 
 # Importamos el Servicio (El Cerebro)
@@ -37,6 +37,7 @@ except ImportError:
     def poblar_todo():
         print("⚠️ El script 'scripts/populate_db.py' no se encuentra.")
 
+
 # Intentamos importar validaciones
 try:
     from utils.validaciones import Validaciones, solicitar_input  # noqa: E402
@@ -47,11 +48,17 @@ except ImportError:
 
     class Validaciones:
         @staticmethod
-        def validar_no_vacio(x): return True
+        def validar_no_vacio(x):
+            return True
+
         @staticmethod
-        def validar_email(x): return True
+        def validar_email(x):
+            return True
+
         @staticmethod
-        def validar_entero(x): return x.isdigit()
+        def validar_entero(x):
+            return x.isdigit()
+
 
 # Instancia global del servicio para usar en todo el menú
 service = None
@@ -71,13 +78,13 @@ def inicializar_servicio():
 # FUNCIONES DE FLUJO
 # -----------------------------------------------------------------------------
 
+
 def procesar_registros():
     while True:
         mostrar_menu(MENU_REGISTROS)
         try:
             op_str = solicitar_input(
-                ">> Seleccione una opción: ",
-                Validaciones.validar_entero
+                ">> Seleccione una opción: ", Validaciones.validar_entero
             )
             op = int(op_str)
 
@@ -91,17 +98,10 @@ def procesar_registros():
             # 1. REGISTRO DE AGENTE
             if op == 1:
                 print("\n--- Nuevo Agente ---")
-                nombre = solicitar_input(
-                    "Nombre: ",
-                    Validaciones.validar_no_vacio
-                )
-                email = solicitar_input(
-                    "Email: ",
-                    Validaciones.validar_email
-                )
+                nombre = solicitar_input("Nombre: ", Validaciones.validar_no_vacio)
+                email = solicitar_input("Email: ", Validaciones.validar_email)
                 rol = solicitar_input(
-                    "Rol (Soporte/Admin): ",
-                    Validaciones.validar_no_vacio
+                    "Rol (Soporte/Admin): ", Validaciones.validar_no_vacio
                 )
 
                 uid = service.registrar_agente(nombre, email, rol)
@@ -111,18 +111,9 @@ def procesar_registros():
             # 2. REGISTRO DE CLIENTE
             elif op == 2:
                 print("\n--- Nuevo Cliente ---")
-                nombre = solicitar_input(
-                    "Nombre: ",
-                    Validaciones.validar_no_vacio
-                )
-                email = solicitar_input(
-                    "Email: ",
-                    Validaciones.validar_email
-                )
-                tel = solicitar_input(
-                    "Teléfono: ",
-                    Validaciones.validar_no_vacio
-                )
+                nombre = solicitar_input("Nombre: ", Validaciones.validar_no_vacio)
+                email = solicitar_input("Email: ", Validaciones.validar_email)
+                tel = solicitar_input("Teléfono: ", Validaciones.validar_no_vacio)
 
                 uid = service.registrar_cliente(nombre, email, tel)
                 if uid:
@@ -132,21 +123,11 @@ def procesar_registros():
             elif op == 3:
                 print("\n--- Nuevo Ticket ---")
                 id_cliente = solicitar_input(
-                    "ID Cliente: ",
-                    Validaciones.validar_no_vacio
+                    "ID Cliente: ", Validaciones.validar_no_vacio
                 )
-                titulo = solicitar_input(
-                    "Título: ",
-                    Validaciones.validar_no_vacio
-                )
-                desc = solicitar_input(
-                    "Descripción: ",
-                    Validaciones.validar_no_vacio
-                )
-                prio = solicitar_input(
-                    "Prioridad: ",
-                    Validaciones.validar_no_vacio
-                )
+                titulo = solicitar_input("Título: ", Validaciones.validar_no_vacio)
+                desc = solicitar_input("Descripción: ", Validaciones.validar_no_vacio)
+                prio = solicitar_input("Prioridad: ", Validaciones.validar_no_vacio)
 
                 uid = service.registrar_ticket(titulo, desc, prio, id_cliente)
                 if uid:
@@ -166,8 +147,7 @@ def procesar_consultas_agentes():
         mostrar_menu(MENU_AGENTES)
         try:
             op_str = solicitar_input(
-                ">> Seleccione una opción: ",
-                Validaciones.validar_entero
+                ">> Seleccione una opción: ", Validaciones.validar_entero
             )
             op = int(op_str)
 
@@ -176,8 +156,7 @@ def procesar_consultas_agentes():
 
             if op == 1:
                 nombre = solicitar_input(
-                    "Ingrese nombre: ",
-                    Validaciones.validar_no_vacio
+                    "Ingrese nombre: ", Validaciones.validar_no_vacio
                 )
                 agente = service.obtener_agente(nombre, por_id=False)
                 if agente:
@@ -186,10 +165,7 @@ def procesar_consultas_agentes():
                     print("❌ No se encontró el agente.")
 
             elif op == 2:
-                uid = solicitar_input(
-                    "Ingrese ID: ",
-                    Validaciones.validar_no_vacio
-                )
+                uid = solicitar_input("Ingrese ID: ", Validaciones.validar_no_vacio)
                 agente = service.obtener_agente(uid, por_id=True)
                 if agente:
                     print(f"\n✅ Agente Encontrado:\n{agente}")
@@ -272,5 +248,5 @@ def main():
             print(f"❌ Error inesperado: {e}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

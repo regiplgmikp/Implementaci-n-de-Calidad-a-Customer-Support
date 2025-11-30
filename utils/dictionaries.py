@@ -1,16 +1,8 @@
 # de cliente
-estadoCuenta = {
-    1: "Activo",
-    2: "Inactivo",
-    3: "Suspendido"
-}
+estadoCuenta = {1: "Activo", 2: "Inactivo", 3: "Suspendido"}
 
 # Agente
-estadoEnEmpresa = {
-    1: "Activo",
-    2: "Inactivo",
-    3: "Incapacitado"
-}
+estadoEnEmpresa = {1: "Activo", 2: "Inactivo", 3: "Incapacitado"}
 
 # ticket
 tipoProblema = {
@@ -21,18 +13,9 @@ tipoProblema = {
     5: "Recuperación de datos o archivos perdidos ",
     6: "Problemas con correo electrónico    ",
     7: "Acceso restringido o permisos insuficientes",
-    8: "Consultas o capacitación sobre el sistema"
+    8: "Consultas o capacitación sobre el sistema",
 }
 
-prioridad = {
-    1: "Baja",
-    2: "Media",
-    3: "Alta",
-    4: "Crítica"
-}
+prioridad = {1: "Baja", 2: "Media", 3: "Alta", 4: "Crítica"}
 
-estado = {
-    1: "Abierto",
-    2: "En Proceso",
-    3: "Cerrado"
-}
+estado = {1: "Abierto", 2: "En Proceso", 3: "Cerrado"}

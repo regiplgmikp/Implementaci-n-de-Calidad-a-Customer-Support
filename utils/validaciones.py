@@ -32,7 +32,7 @@ class Validaciones:
     @staticmethod
     def validar_email(email):
         """Valida el formato de correo electrónico usando Expresiones Regulares."""
-        patron = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+        patron = r"^[\w\.-]+@[\w\.-]+\.\w+$"
         if re.match(patron, email):
             return True
         print("❌ Error: Formato de correo inválido (ejemplo: usuario@dominio.com).")
@@ -42,7 +42,7 @@ class Validaciones:
     def validar_fecha(fecha_str):
         """Valida que la fecha tenga formato YYYY-MM-DD."""
         try:
-            datetime.strptime(fecha_str, '%Y-%m-%d')
+            datetime.strptime(fecha_str, "%Y-%m-%d")
             return True
         except ValueError:
             print("❌ Error: Formato de fecha inválido. Use YYYY-MM-DD.")

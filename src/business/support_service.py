@@ -30,17 +30,21 @@ class SupportService:
 
             # 1. MongoDB
             datos_agente = {
-                "nombre": nombre, "email": email, "rol": rol,
-                "activo": True, "fecha_creacion": datetime.now()
+                "nombre": nombre,
+                "email": email,
+                "rol": rol,
+                "activo": True,
+                "fecha_creacion": datetime.now(),
             }
             uid = self.mongo_repo.crear_agente(datos_agente)
             print(f"   ✅ MongoDB: ID {uid} generado.")
 
             # 2. Cassandra (Historial)
             self.cassandra_repo.registrar_evento(
-                entidad_id=uid, tipo_entidad="Agente",
+                entidad_id=uid,
+                tipo_entidad="Agente",
                 accion="CREACION",
-                descripcion=f"Alta de agente {nombre} con rol {rol}"
+                descripcion=f"Alta de agente {nombre} con rol {rol}",
             )
 
             # 3. Dgraph (Grafo)
@@ -65,8 +69,10 @@ class SupportService:
         try:
             print(f"\n🚀 Iniciando registro de Cliente: {nombre}")
             datos = {
-                "nombre": nombre, "email": email,
-                "telefono": telefono, "fecha_registro": datetime.now()
+                "nombre": nombre,
+                "email": email,
+                "telefono": telefono,
+                "fecha_registro": datetime.now(),
             }
             # 1. Mongo
             uid = self.mongo_repo.crear_cliente(datos)
@@ -92,9 +98,12 @@ class SupportService:
         try:
             print(f"\n🚀 Creando Ticket para Cliente {id_cliente}")
             ticket = {
-                "titulo": titulo, "descripcion": descripcion,
-                "prioridad": prioridad, "cliente_id": id_cliente,
-                "estado": "Abierto", "fecha_creacion": datetime.now()
+                "titulo": titulo,
+                "descripcion": descripcion,
+                "prioridad": prioridad,
+                "cliente_id": id_cliente,
+                "estado": "Abierto",
+                "fecha_creacion": datetime.now(),
             }
 
             # 1. Mongo
@@ -118,4 +127,5 @@ class SupportService:
 
     def cerrar_conexiones(self):
         from data_access.db_connection import DBConnection
+
         DBConnection.close_all()
