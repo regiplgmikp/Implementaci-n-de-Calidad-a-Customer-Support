@@ -1,9 +1,8 @@
 import sys
 import os
 
-# -----------------------------------------------------------------------------
 # CONFIGURACIÓN DE RUTAS
-# -----------------------------------------------------------------------------
+
 # Obtenemos la ruta del directorio actual
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # Ruta a 'src'
@@ -176,7 +175,7 @@ def procesar_consultas_agentes():
     while True:
         mostrar_menu(MENU_AGENTES)
         try:
-            op = int(solicitar_input(">> Opción: ", Validaciones.validar_entero))
+            op = int(solicitar_input("> Opción: ", Validaciones.validar_entero))
             if op == 0:
                 break
             elif op == 1:
@@ -238,7 +237,7 @@ def procesar_consultas_tickets():
     while True:
         mostrar_menu(MENU_TICKETS)
         try:
-            op = int(solicitar_input(">> Opción: ", Validaciones.validar_entero))
+            op = int(solicitar_input("Opción: ", Validaciones.validar_entero))
             if op == 0:
                 break
 
@@ -275,7 +274,7 @@ def procesar_consultas_tickets():
 def procesar_consultas_clientes():
     # Consultas de clientes
     print("🚧 Módulo de Clientes en construcción")
-    input("Enter para continuar...")
+    input("Enter para continuar.")
 
 
 def procesar_consultas_empresas():
@@ -287,7 +286,7 @@ def procesar_consultas_empresas():
 def procesar_actualizaciones():
     # Actualizaciones
     print("🚧 Módulo de Actualizaciones en construcción")
-    input("Enter para continuar...")
+    input("Enter para continuar..")
 
 
 # -----------------------------------------------------------------------------
